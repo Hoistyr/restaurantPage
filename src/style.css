@@ -1,0 +1,61 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#content {
+
+}
+
+#header {
+    background-image:linear-gradient(to top,#f0c380, #eec469);
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+#restaurantName {
+    font-family: 'Redressed', cursive;
+    font-size: 4rem;
+    margin: 0px;
+    color: white;
+}
+
+#content {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #5CAB7D;
+}
+
+.contentBlock {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#imageInfoBlock {
+    background-color: #5A9367;
+    display: flex;
+    width:70%;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+#restaurantInformation {
+    padding: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+#infoText {
+    color: white;
+}
+
+#homepageImage {
+
+}
+
