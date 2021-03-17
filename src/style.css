@@ -2,10 +2,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     height: 100%;
-}
-
-#content {
-
+    background-color: #EEE8E7;
 }
 
 #header {
@@ -16,7 +13,7 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 80px;
-    background-color: white;
+    background-color: #815E5B;
     border-bottom: solid rgba(128, 128, 128, 0.39) 1px;
 }
 
@@ -35,17 +32,20 @@ html, body {
     width: 100%;
     height: 100%;
     align-items: center;
-    background-color: #F5F6F7;
+    background-color: #EEE8E7;
     box-sizing: border-box;
+    margin-bottom: 500px;
 }
 
 .contentBlock {
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 25px;
 }
 
 .imageInfoBlock {
-    background-image: linear-gradient(#f0c380, #eec469);
+    background-image: linear-gradient(#997370, #685155);
+    background-color: white;
     display: flex;
     width:70%;
     box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.329);
@@ -59,7 +59,13 @@ html, body {
 }
 
 #infoText {
-    color: #2B4162;
+    color: #EEE8E7;
+    border-left: solid 1px #EEE8E7;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
 }
 
 #homepageImage {
