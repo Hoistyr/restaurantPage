@@ -11,6 +11,9 @@ const onPageLoad = (() => {
                 contentBlock.classList.add('imageInfoBlock');
                 pageContent.appendChild(contentBlock);
                 
+                const restaurantName = document.getElementById('restaurantName');
+                restaurantName.classList.add('onHome');
+                
                 const homepageImage = document.createElement('img');
                 homepageImage.src =  '../src/images/homepageImage.jpg';
                 homepageImage.classList.add('homepageImage');

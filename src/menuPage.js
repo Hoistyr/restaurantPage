@@ -41,25 +41,29 @@ const onPageLoad = (() => {
             //Goes through the menu items and creates the content blocks depending upon what information they have
             for(let i = 0; i < detailedMenuItems.length; i++) {
                 const foodName = detailedMenuItems[i].name.toLowerCase().replace(/\s/g, '');
-                console.log(foodName);
+                
+                //Creates the block to contain the menu item
                 const menuItemBlock = document.createElement('div');
                 menuItemBlock.id = `${foodName}`
                 menuItemBlock.classList.add('menuImageInfoBlock');
                 pageContent.appendChild(menuItemBlock);
-                
-                
-                
+               
+                //Creates the image
                 const foodImage = document.createElement('img');
                 foodImage.src =  `../src/images/${foodName}.jpg`;
                 foodImage.classList.add('foodImage');
                 foodImage.alt = `Picture of a ${foodName}`;
                 
+                const foodInfoButtonHolder = document.createElement('div');
+                foodInfoButtonHolder.id='foodInfoButtonHolder';
+
                 const foodInformation = document.createElement('div');
                 foodInformation.id = 'foodInformation';
                 if ((i % 2) !== 0) {
-                    menuItemBlock.append(foodImage, foodInformation);
+                    menuItemBlock.append(foodImage, foodInfoButtonHolder);
                     
-                    const foodTitle = document.createElement('h3');
+                    foodInfoButtonHolder.appendChild(foodInformation);
+                    const foodTitle = document.createElement('h2');
                     foodTitle.classList.add('foodTitle');
                     foodTitle.textContent = `${detailedMenuItems[i].name}`
                     foodInformation.appendChild(foodTitle);
@@ -70,8 +74,9 @@ const onPageLoad = (() => {
                     infoText.textContent = `${detailedMenuItems[i].description}`;
                     foodInformation.appendChild(infoText);
                 } else {
-                    menuItemBlock.append(foodInformation, foodImage);
+                    menuItemBlock.append(foodInfoButtonHolder, foodImage);
                     
+                    foodInfoButtonHolder.appendChild(foodInformation);
                     const foodTitle = document.createElement('h2');
                     foodTitle.classList.add('foodTitle');
                     foodTitle.textContent = `${detailedMenuItems[i].name}`
@@ -82,6 +87,10 @@ const onPageLoad = (() => {
                     infoText.textContent = `${detailedMenuItems[i].description}`;
                     foodInformation.appendChild(infoText);
                 }
+                const orderButton = document.createElement('div');
+                orderButton.classList.add('orderButton');
+                orderButton.textContent = 'Add to Order';
+                foodInfoButtonHolder.appendChild(orderButton);
             }
         }
         createMenuContent();

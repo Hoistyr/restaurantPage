@@ -12,6 +12,7 @@ const onPageLoad = (() => {
         
         const restaurantName = document.createElement('h1');
         restaurantName.id = 'restaurantName';
+        restaurantName.classList.add('onHome');
         restaurantName.textContent = `Garbalo's`;
         nameHolder.appendChild(restaurantName);
 

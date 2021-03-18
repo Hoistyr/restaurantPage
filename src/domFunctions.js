@@ -10,7 +10,12 @@ const resetHeaderTabs = () => {
     navTabs.forEach((tab) => {
         tab.classList.remove('onPage');
     })
+
+    const restaurantName = document.getElementById('restaurantName');
+    restaurantName.classList.remove('onHome');
 }
+
+
 
 
 export { emptyPageContent, resetHeaderTabs };
