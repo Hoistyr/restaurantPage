@@ -1,10 +1,10 @@
 const onPageLoad = (() => {
     const buildContent = (() => {
-        const content = document.querySelector('#content');
-        const pageContent = document.createElement('div');
-        pageContent.id = 'pageContent';
-        content.appendChild(pageContent);
         const buildBlock = (blockNumber) => {
+            const content = document.querySelector('#content');
+            const pageContent = document.createElement('div');
+            pageContent.id = 'pageContent';
+            content.appendChild(pageContent);
             for(let i = 1; i <= blockNumber; i++) {
                 const contentBlock = document.createElement('div');
                 contentBlock.id = `block${i}`
@@ -37,11 +37,11 @@ const onPageLoad = (() => {
         return {
             buildBlock,
         }
-        
+     
     })();
     return {
         buildContent,
-    }
+    } 
 })();
 
 

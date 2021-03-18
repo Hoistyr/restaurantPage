@@ -1,18 +1,16 @@
-const x = (() => {
-    const emptyPageContent = () => {
-        console.log('in emptyPageContent');
-        const pageContent = document.getElementById('pageContent');
+const emptyPageContent = () => {
+    let pageContent = document.querySelector('#pageContent');
+    if (pageContent !== null) {
         pageContent.remove();
-        
-        const content = document.getElementById('content');
-        const pageContent = document.createElement('div');
-        pageContent.id = 'pageContent';
-        content.appendChild(pageContent);
     }
-    return {
-        emptyPageContent,
-    }
-})();
+}
+
+const resetHeaderTabs = () => {
+    const navTabs = document.querySelectorAll('.headerTab');
+    navTabs.forEach((tab) => {
+        tab.classList.remove('onPage');
+    })
+}
 
 
-export { x };
+export { emptyPageContent, resetHeaderTabs };

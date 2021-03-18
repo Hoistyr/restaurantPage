@@ -54,7 +54,7 @@ html, body {
 #tabHolder {
     display: flex;
     right: 0px;
-    height: 40px;
+    height: 60px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -77,12 +77,23 @@ html, body {
     padding-left: 15px;
     font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
+    border-top: solid 8px transparent;
+    border-bottom: solid 8px transparent;
 }
 
 .headerTab:hover {
     background-color: #36422c;
     cursor: pointer;
     color: #f2f3f2;
+}
+
+.onPage {
+    border-bottom: solid 8px #36422c;
+}
+
+.headerTab.onPage:hover {
+    border-bottom: solid 8px #36422c;
+    background-color: #b3c0b7;
 }
 
 #pageContent {
@@ -92,6 +103,14 @@ html, body {
     align-items: center;
     background-color: #f2f3f2;
     box-sizing: border-box;
+}
+
+.homepageImage {
+    width: 800px;
+    height: auto; 
+    margin: 20px;
+    object-fit: cover;
+    object-position: 20% 10%;
 }
 
 .imageInfoBlock {
@@ -114,18 +133,62 @@ html, body {
     height: 100%;
 }
 
+#foodInformation {
+    padding: 20px;
+    font-family: 'Rubik', sans-serif;
+    height: 100%;
+    width: 300px;
+    box-sizing: border-box;
+}
+
 .infoText {
     color: #36422c;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    height: 100%;
 }
 
-.rightText {
+.foodInfoText {
+    color: #36422c;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    font-size: 1.25rem;
+    word-wrap: break-word;
 }
-.leftText {
+
+.foodTitle {
+    color: #36422c;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.menuImageInfoBlock {
+
+    background-color: #f2f3f2;
+    display: flex;
+    width:70%;
+    height: 600px;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.329);
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid 8px #36422c;
+    box-sizing: border-box;
+}
+
+.foodImage {
+    width: 500px;
+    height: 500px; 
+    margin: 20px;
+    object-fit: cover;
+    object-position: 20% 10%;
+    border-bottom: solid 8px #c74c47;
+    box-sizing: border-box;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -136,8 +199,13 @@ html, body {
     }
     
     .homepageImage {
-    height: 375px;
+    height: 350px;
     width: auto;
+    }
+
+    .foodImage {
+        width: 400px;
+        height: 400px;
     }
 
     
